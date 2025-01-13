@@ -14,8 +14,9 @@ celery_app = Celery(
     backend=os.getenv('REDIS_URL')
 )
 
-
-embeddings = OpenAIEmbeddings(openai_api_key=os.getenv('OPENAI_API_KEY'))
+index_name = os.getenv('PINECONE_INDEX')
+embeddings = OpenAIEmbeddings(openai_api_key=os.getenv('OPENAI_API_KEY'), model="text-embedding-3-large")
+pinecone = PineconeVectorStore.from_existing_index(index_name, embeddings)
 
 @celery_app.task(bind=True, max_retries=3)
 def process_message(self, message_data: dict):
@@ -36,7 +37,7 @@ def process_message(self, message_data: dict):
             texts,
             embeddings,
             index_name=os.getenv('PINECONE_INDEX'),
-            metadata=[metadata]
+            metadatas=[metadata]
         )
         
         return {"status": "success", "messageId": message_data["id"]}
