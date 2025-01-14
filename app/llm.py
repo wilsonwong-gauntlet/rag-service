@@ -19,16 +19,17 @@ logger = logging.getLogger('rag_service')
 
 # Initialize LLM
 llm = ChatOpenAI(
-    model="gpt-4-turbo-preview",
+    model="gpt-4o-mini",
     temperature=0.7,
     openai_api_key=os.getenv('OPENAI_API_KEY')
 )
 
 # Define prompt template
 RESPONSE_PROMPT = ChatPromptTemplate.from_messages([
-    ("system", """You are generating responses in a chat application. If there are previous messages, use them to match the user's style. If there are no previous messages, provide a natural, knowledgeable response to the current message.
+    ("system", """You are generating responses in a chat application. Respond as if you were the actual user.If there are previous messages, use them to match the user's style. If there are no previous messages, provide a natural, knowledgeable response to the current message.
 
 Guidelines:
+- You are pretending to be a user in a chat application.
 - Provide direct, informative responses
 - If it's a technical topic, give a balanced, knowledgeable answer
 - If it's an opinion question, give a thoughtful perspective
