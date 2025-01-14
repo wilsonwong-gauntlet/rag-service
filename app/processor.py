@@ -1,7 +1,6 @@
 from celery import Celery
 from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
-import pinecone
 import os
 from dotenv import load_dotenv
 
@@ -14,9 +13,10 @@ celery_app = Celery(
     backend=os.getenv('REDIS_URL')
 )
 
-index_name = os.getenv('PINECONE_INDEX')
-embeddings = OpenAIEmbeddings(openai_api_key=os.getenv('OPENAI_API_KEY'), model="text-embedding-3-large")
-pinecone = PineconeVectorStore.from_existing_index(index_name, embeddings)
+embeddings = OpenAIEmbeddings(
+    openai_api_key=os.getenv('OPENAI_API_KEY'), 
+    model="text-embedding-3-large"
+)
 
 @celery_app.task(bind=True, max_retries=3)
 def process_message(self, message_data: dict):
@@ -24,14 +24,11 @@ def process_message(self, message_data: dict):
         metadata = {
             "messageId": message_data["id"],
             "workspaceId": message_data["workspaceId"],
-            "channelId": message_data["channelId"],
             "userId": message_data["userId"],
-            "userName": message_data["userName"],
-            "channelName": message_data["channelName"],
-            "timestamp": message_data["createdAt"]
+            "channelId": message_data["channelId"]
         }
         
-        # Create embedding
+        # Create embedding and store in Pinecone
         texts = [message_data["content"]]
         vector_store = PineconeVectorStore.from_texts(
             texts,

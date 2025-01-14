@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
-from .schemas import MessageEvent, SearchQuery, SearchResponse, SearchResult
+from .schemas import MessageEvent, SearchQuery, SearchResult, AIResponse, GenerateRequest
 from .processor import process_message, embeddings
+from .llm import generate_contextual_response
 from langchain_pinecone import PineconeVectorStore
 import os
 from dotenv import load_dotenv
@@ -19,17 +20,15 @@ async def handle_message_event(message: MessageEvent):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/search", response_model=SearchResponse)
+@app.post("/search")
 async def search_messages(query: SearchQuery):
     """Search for relevant messages"""
     try:
         # Build filter based on workspace and sender
         filter_dict = {
             "workspaceId": query.workspaceId,
-            "userId": query.receiverId  # Find messages from this user
+            "userId": query.receiverId
         }
-        if query.channelId:
-            filter_dict["channelId"] = query.channelId
 
         vector_store = PineconeVectorStore.from_existing_index(
             index_name=os.getenv('PINECONE_INDEX'),
@@ -45,17 +44,55 @@ async def search_messages(query: SearchQuery):
         messages = [
             SearchResult(
                 content=doc.page_content,
-                messageId=doc.metadata["messageId"],
-                userName=doc.metadata["userName"],
-                channelName=doc.metadata["channelName"],
-                timestamp=doc.metadata["timestamp"]
+                messageId=doc.metadata["messageId"]
             ) for doc in results
         ]
         
-        return SearchResponse(messages=messages)
+        return {"messages": messages}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+@app.post("/generate", response_model=AIResponse)
+async def generate_response(query: GenerateRequest):
+    """Generate an AI response using RAG context"""
+    try:
+        # Build filter based on workspace and sender
+        filter_dict = {
+            "workspaceId": query.workspaceId,
+            "userId": query.receiverId
+        }
+
+        vector_store = PineconeVectorStore.from_existing_index(
+            index_name=os.getenv('PINECONE_INDEX'),
+            embedding=embeddings
+        )
+        
+        # Get relevant context messages
+        results = vector_store.similarity_search_with_score(
+            query.query,
+            k=query.limit,
+            filter=filter_dict
+        )
+        
+        # Convert to source messages
+        source_messages = [
+            SearchResult(
+                content=doc.page_content,
+                messageId=doc.metadata["messageId"]
+            ) for doc, score in results
+        ]
+        
+        # Generate response using LLM
+        response = await generate_contextual_response(
+            current_message=query.query,
+            context_messages=[msg.content for msg in source_messages]
+        )
+        
+        return AIResponse(
+            response=response,
+            confidence=1.0 if results else 0.5,
+            sourceMessages=source_messages
+        )
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) 

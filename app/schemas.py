@@ -15,16 +15,20 @@ class MessageEvent(BaseModel):
 class SearchQuery(BaseModel):
     query: str
     workspaceId: str
-    channelId: Optional[str] = None
+    receiverId: str
+    limit: int = 5
+
+class GenerateRequest(BaseModel):
+    query: str
+    workspaceId: str
     receiverId: str
     limit: int = 5
 
 class SearchResult(BaseModel):
     content: str
     messageId: str
-    userName: str
-    channelName: str
-    timestamp: datetime
 
-class SearchResponse(BaseModel):
-    messages: List[SearchResult]
+class AIResponse(BaseModel):
+    response: str
+    confidence: float
+    sourceMessages: List[SearchResult]
