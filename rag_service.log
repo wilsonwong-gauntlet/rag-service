@@ -125,3 +125,144 @@ In a world focused on incremental improvement, first principles thinking offers 
 8. **Feynman Technique**: Named after physicist Richard Feynman, this technique involves teaching a concept you want to understand deeply to someone else, in simple terms. This helps solidify your understanding and identify any gaps in your knowledge.
 
 Each of these mental models offers a unique lens for problem-solving and decision-making, providing valuable tools for navigating complex situations.
+2025-01-13 21:06:18,770 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 21:06:18,770 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 21:06:18,770 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 21:06:19,601 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Generating response for message: yankees is better than red sox
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context messages available: 5
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context messages:
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context[0]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context[1]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context[2]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context[3]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context[4]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Calling LLM with prompt...
+2025-01-13 21:06:24,447 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 21:06:24,450 - rag_service - INFO - [20250113_210619_779331] Generated response: The debate between the Yankees and the Red Sox is one of the most storied rivalries in baseball history. Both teams have passionate fan bases, impressive records, and a rich history of memorable moments. Your preference might come down to individual achievements, team successes, or personal affiliations. The Yankees boast 27 World Series championships, making them the most successful team in MLB history, while the Red Sox have experienced a resurgence in the 21st century, winning four championships since breaking their "Curse of the Bambino" in 2004. Ultimately, whether the Yankees are better than the Red Sox can be subjective and often depends on one's perspective and loyalty.
+2025-01-13 21:06:48,995 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 21:06:48,995 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 21:06:48,995 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 21:06:49,524 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Generating response for message: new york better than boston
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context messages available: 5
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context messages:
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context[0]: The debate between the Yankees and the Red Sox is one of the most storied rivalries in baseball history. Both teams have passionate fan bases, impressive records, and a rich history of memorable moments. Your preference might come down to individual achievements, team successes, or personal affiliations. The Yankees boast 27 World Series championships, making them the most successful team in MLB history, while the Red Sox have experienced a resurgence in the 21st century, winning four championships since breaking their "Curse of the Bambino" in 2004. Ultimately, whether the Yankees are better than the Red Sox can be subjective and often depends on one's perspective and loyalty.
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context[1]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context[2]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context[3]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context[4]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Calling LLM with prompt...
+2025-01-13 21:06:53,852 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 21:06:53,855 - rag_service - INFO - [20250113_210649_651303] Generated response: The question of whether New York is better than Boston often boils down to personal preference and the specific aspects you're considering. Both cities have their unique strengths and attractions. New York, known for its bustling city life, diverse culture, iconic landmarks, and as a global business hub, offers a vibrant, fast-paced environment. Boston, on the other hand, is celebrated for its rich history, academic prestige, and a strong sense of community, offering a more intimate city experience with a blend of modern and historical elements. The choice between New York and Boston can depend on factors like lifestyle preferences, career opportunities, and cultural interests.
+2025-01-13 21:07:11,228 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 21:07:11,228 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 21:07:11,228 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 21:07:11,647 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 21:07:11,840 - rag_service - INFO - [20250113_210711_840919] Generating response for message: do you like new york or boston and why
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context messages available: 5
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context messages:
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context[0]: new york better than boston
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context[1]: yankees is better than red sox
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context[2]: hello
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context[3]: what are the best mental models to use?
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context[4]: Absolutely, you've captured the essence of first principles thinking brilliantly. It's indeed a powerful method for problem-solving and innovation. By breaking down complex issues to their most basic elements, it opens up avenues for creative solutions that might not be visible through conventional thinking. This approach not only fosters a deeper understanding of problems but also encourages the development of unique, groundbreaking solutions. It's fascinating to see how this method can be applied across various fields, from technology to business strategies, pushing boundaries and challenging the norms. Do you think there are specific areas or industries where first principles thinking could be particularly beneficial?
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Calling LLM with prompt...
+2025-01-13 21:07:17,825 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 21:07:17,833 - rag_service - INFO - [20250113_210711_840919] Generated response: Choosing between New York and Boston is tough because both cities offer unique experiences and have their distinct charm. I lean towards New York for its incredible diversity, vibrant cultural scene, and the sheer scale of opportunities it offers in arts, entertainment, dining, and business. New York's energy is unparalleled; it's a city that truly never sleeps, with something happening at every hour. Its iconic landmarks, from Central Park to the Statue of Liberty, add to its appeal. However, Boston has its allure with rich historical sites, educational institutions, and a strong sense of community. Its smaller size compared to New York makes it more navigable, fostering a tight-knit feeling while still offering a wealth of cultural and social activities. Ultimately, the choice depends on personal preferences and what you're looking for in a city experience.
+2025-01-13 21:08:44,261 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 21:08:44,261 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 21:08:44,261 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 21:08:45,195 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Generating response for message: New York is by far superior to boston in every single aspect.
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context messages available: 5
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context messages:
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context[0]: The question of whether New York is better than Boston often boils down to personal preference and the specific aspects you're considering. Both cities have their unique strengths and attractions. New York, known for its bustling city life, diverse culture, iconic landmarks, and as a global business hub, offers a vibrant, fast-paced environment. Boston, on the other hand, is celebrated for its rich history, academic prestige, and a strong sense of community, offering a more intimate city experience with a blend of modern and historical elements. The choice between New York and Boston can depend on factors like lifestyle preferences, career opportunities, and cultural interests.
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context[1]: do you like new york or boston and why
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context[2]: The debate between the Yankees and the Red Sox is one of the most storied rivalries in baseball history. Both teams have passionate fan bases, impressive records, and a rich history of memorable moments. Your preference might come down to individual achievements, team successes, or personal affiliations. The Yankees boast 27 World Series championships, making them the most successful team in MLB history, while the Red Sox have experienced a resurgence in the 21st century, winning four championships since breaking their "Curse of the Bambino" in 2004. Ultimately, whether the Yankees are better than the Red Sox can be subjective and often depends on one's perspective and loyalty.
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context[3]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context[4]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Calling LLM with prompt...
+2025-01-13 21:08:47,804 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 21:08:47,806 - rag_service - INFO - [20250113_210845_320994] Generated response: It sounds like you have a strong preference for New York! Indeed, New York's unique blend of cultural diversity, iconic landmarks, and dynamic business environment make it stand out for many people. Each city has its own charm and strengths, and it's fascinating to see how personal experiences and priorities can shape our preferences so distinctly. What aspects of New York do you find most appealing compared to Boston?
+2025-01-13 21:09:08,894 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 21:09:08,894 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 21:09:08,894 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 21:09:09,448 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 21:09:09,702 - rag_service - INFO - [20250113_210909_702720] Generating response for message: what city in the northeast would you move to?
+2025-01-13 21:09:09,702 - rag_service - INFO - [20250113_210909_702720] Context messages available: 5
+2025-01-13 21:09:09,702 - rag_service - INFO - [20250113_210909_702720] Context messages:
+2025-01-13 21:09:09,702 - rag_service - INFO - [20250113_210909_702720] Context[0]: Choosing between New York and Boston is tough because both cities offer unique experiences and have their distinct charm. I lean towards New York for its incredible diversity, vibrant cultural scene, and the sheer scale of opportunities it offers in arts, entertainment, dining, and business. New York's energy is unparalleled; it's a city that truly never sleeps, with something happening at every hour. Its iconic landmarks, from Central Park to the Statue of Liberty, add to its appeal. However, Boston has its allure with rich historical sites, educational institutions, and a strong sense of community. Its smaller size compared to New York makes it more navigable, fostering a tight-knit feeling while still offering a wealth of cultural and social activities. Ultimately, the choice depends on personal preferences and what you're looking for in a city experience.
+2025-01-13 21:09:09,703 - rag_service - INFO - [20250113_210909_702720] Context[1]: new york better than boston
+2025-01-13 21:09:09,703 - rag_service - INFO - [20250113_210909_702720] Context[2]: New York is by far superior to boston in every single aspect.
+2025-01-13 21:09:09,703 - rag_service - INFO - [20250113_210909_702720] Context[3]: yankees is better than red sox
+2025-01-13 21:09:09,703 - rag_service - INFO - [20250113_210909_702720] Context[4]: hello
+2025-01-13 21:09:09,703 - rag_service - INFO - [20250113_210909_702720] Calling LLM with prompt...
+2025-01-13 21:09:11,803 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 21:09:11,808 - rag_service - INFO - [20250113_210909_702720] Generated response: Given your strong preference for New York and appreciation for its diverse offerings, vibrant culture, and dynamic atmosphere, it sounds like New York City would be your top choice for moving to in the Northeast. Its unique blend of opportunities, iconic landmarks, and never-ending energy align closely with your interests and preferences.
