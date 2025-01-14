@@ -1,0 +1,127 @@
+2025-01-13 20:48:25,519 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 20:48:25,519 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 20:48:25,530 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 20:48:26,206 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 20:48:26,424 - rag_service - INFO - [20250113_204826_424335] Generating response for message: cm5txqwpt0001sbpie4gtp0z5
+2025-01-13 20:48:26,424 - rag_service - INFO - [20250113_204826_424335] Context messages available: 0
+2025-01-13 20:48:26,424 - rag_service - INFO - [20250113_204826_424335] No context messages available
+2025-01-13 20:48:26,424 - rag_service - INFO - [20250113_204826_424335] Calling LLM with prompt...
+2025-01-13 20:48:26,424 - rag_service - ERROR - [20250113_204826_424335] Error generating response: name 'llm' is not defined
+Traceback (most recent call last):
+  File "/Users/gauntlet/rag-service/app/llm.py", line 38, in generate_contextual_response
+    response = await llm.ainvoke(
+                     ^^^
+NameError: name 'llm' is not defined
+2025-01-13 20:49:30,325 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 20:49:30,325 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 20:49:30,335 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 20:49:31,108 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 20:49:31,283 - rag_service - INFO - [20250113_204931_283378] Generating response for message: cm5txqwpt0001sbpie4gtp0z5
+2025-01-13 20:49:31,283 - rag_service - INFO - [20250113_204931_283378] Context messages available: 0
+2025-01-13 20:49:31,283 - rag_service - INFO - [20250113_204931_283378] No context messages available
+2025-01-13 20:49:31,283 - rag_service - INFO - [20250113_204931_283378] Calling LLM with prompt...
+2025-01-13 20:49:31,283 - rag_service - ERROR - [20250113_204931_283378] Error generating response: name 'RESPONSE_PROMPT' is not defined
+Traceback (most recent call last):
+  File "/Users/gauntlet/rag-service/app/llm.py", line 47, in generate_contextual_response
+    RESPONSE_PROMPT.format(
+    ^^^^^^^^^^^^^^^
+NameError: name 'RESPONSE_PROMPT' is not defined
+2025-01-13 20:50:22,291 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 20:50:22,292 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 20:50:22,302 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 20:50:23,263 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 20:50:23,448 - rag_service - INFO - [20250113_205023_448385] Generating response for message: cm5txqwpt0001sbpie4gtp0z5
+2025-01-13 20:50:23,448 - rag_service - INFO - [20250113_205023_448385] Context messages available: 0
+2025-01-13 20:50:23,448 - rag_service - INFO - [20250113_205023_448385] No context messages available
+2025-01-13 20:50:23,448 - rag_service - INFO - [20250113_205023_448385] Calling LLM with prompt...
+2025-01-13 20:50:24,541 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 20:50:24,547 - rag_service - INFO - [20250113_205023_448385] Generated response: It seems like there's been a mix-up or an error in your message. Could you provide more details or clarify what you need help with? I'm here to assist!
+2025-01-13 20:52:34,028 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 20:52:34,029 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 20:52:34,029 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 20:52:34,645 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Generating response for message: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context messages available: 4
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context messages:
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context[0]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context[1]: hello
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context[2]: I'm sorry, but I can't proceed without the actual content of the previous messages or the current message to respond to. Could you provide the details or context of the conversation?
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context[3]: It seems like there's been a mix-up or an error in your message. Could you provide more details or clarify what you need help with? I'm here to assist!
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Calling LLM with prompt...
+2025-01-13 20:52:38,240 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 20:52:38,243 - rag_service - INFO - [20250113_205234_774636] Generated response: Absolutely, you've captured the essence of first principles thinking brilliantly. It's indeed a powerful method for problem-solving and innovation. By breaking down complex issues to their most basic elements, it opens up avenues for creative solutions that might not be visible through conventional thinking. This approach not only fosters a deeper understanding of problems but also encourages the development of unique, groundbreaking solutions. It's fascinating to see how this method can be applied across various fields, from technology to business strategies, pushing boundaries and challenging the norms. Do you think there are specific areas or industries where first principles thinking could be particularly beneficial?
+2025-01-13 20:53:30,886 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 20:53:30,886 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 20:53:30,886 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 20:53:31,389 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Generating response for message: what are the best mental models to use?
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context messages available: 5
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context messages:
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context[0]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context[1]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context[2]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context[3]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context[4]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Calling LLM with prompt...
+2025-01-13 20:53:39,849 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 20:53:39,854 - rag_service - INFO - [20250113_205331_597105] Generated response: The best mental models to use depend on the context and the type of problem you're trying to solve. However, several mental models are universally recognized for their effectiveness across various domains. Here are a few key ones:
+
+1. **First Principles Thinking**: As you've outlined, breaking down problems into their fundamental truths can lead to innovative solutions.
+
+2. **Occam's Razor**: This principle suggests that the simplest explanation is often the correct one. It encourages us to eliminate unnecessary complexities to find the most straightforward solution.
+
+3. **Pareto Principle (80/20 Rule)**: This principle suggests that roughly 80% of effects come from 20% of causes. Identifying and focusing on these critical factors can be more efficient than spreading efforts too thinly.
+
+4. **Second-Order Thinking**: This involves looking beyond the immediate consequences of a decision and considering what could happen next, helping to anticipate and mitigate potential problems.
+
+5. **Compound Interest**: While often associated with finance, the principle of compound interest — where gains build upon previous gains — can be applied to personal growth, learning, and productivity.
+
+6. **Inversion**: Instead of directly approaching a problem, consider what you want to avoid. This can help identify critical obstacles to navigate around.
+
+7. **Hanlon's Razor**: This model suggests not attributing to malice that which is adequately explained by mistake or ignorance. It encourages giving the benefit of the doubt and focusing on solutions rather than blame.
+
+8. **Feynman Technique**: Named after physicist Richard Feynman, this technique involves teaching a concept you want to understand deeply to someone else, in simple terms. This helps solidify your understanding and identify any gaps in your knowledge.
+
+Each of these mental models offers a unique lens for problem-solving and decision-making, providing valuable tools for navigating complex situations.
