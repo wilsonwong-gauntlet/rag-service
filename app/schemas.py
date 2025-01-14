@@ -16,6 +16,7 @@ class SearchQuery(BaseModel):
     query: str
     workspaceId: str
     channelId: Optional[str] = None
+    receiverId: str
     limit: int = 5
 
 class SearchResult(BaseModel):

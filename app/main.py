@@ -23,8 +23,11 @@ async def handle_message_event(message: MessageEvent):
 async def search_messages(query: SearchQuery):
     """Search for relevant messages"""
     try:
-        # Build filter based on workspace and optional channel
-        filter_dict = {"workspaceId": query.workspaceId}
+        # Build filter based on workspace and sender
+        filter_dict = {
+            "workspaceId": query.workspaceId,
+            "userId": query.receiverId  # Find messages from this user
+        }
         if query.channelId:
             filter_dict["channelId"] = query.channelId
 
