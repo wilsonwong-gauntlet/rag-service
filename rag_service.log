@@ -1,0 +1,430 @@
+2025-01-13 20:48:25,519 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 20:48:25,519 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 20:48:25,530 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 20:48:26,206 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 20:48:26,424 - rag_service - INFO - [20250113_204826_424335] Generating response for message: cm5txqwpt0001sbpie4gtp0z5
+2025-01-13 20:48:26,424 - rag_service - INFO - [20250113_204826_424335] Context messages available: 0
+2025-01-13 20:48:26,424 - rag_service - INFO - [20250113_204826_424335] No context messages available
+2025-01-13 20:48:26,424 - rag_service - INFO - [20250113_204826_424335] Calling LLM with prompt...
+2025-01-13 20:48:26,424 - rag_service - ERROR - [20250113_204826_424335] Error generating response: name 'llm' is not defined
+Traceback (most recent call last):
+  File "/Users/gauntlet/rag-service/app/llm.py", line 38, in generate_contextual_response
+    response = await llm.ainvoke(
+                     ^^^
+NameError: name 'llm' is not defined
+2025-01-13 20:49:30,325 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 20:49:30,325 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 20:49:30,335 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 20:49:31,108 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 20:49:31,283 - rag_service - INFO - [20250113_204931_283378] Generating response for message: cm5txqwpt0001sbpie4gtp0z5
+2025-01-13 20:49:31,283 - rag_service - INFO - [20250113_204931_283378] Context messages available: 0
+2025-01-13 20:49:31,283 - rag_service - INFO - [20250113_204931_283378] No context messages available
+2025-01-13 20:49:31,283 - rag_service - INFO - [20250113_204931_283378] Calling LLM with prompt...
+2025-01-13 20:49:31,283 - rag_service - ERROR - [20250113_204931_283378] Error generating response: name 'RESPONSE_PROMPT' is not defined
+Traceback (most recent call last):
+  File "/Users/gauntlet/rag-service/app/llm.py", line 47, in generate_contextual_response
+    RESPONSE_PROMPT.format(
+    ^^^^^^^^^^^^^^^
+NameError: name 'RESPONSE_PROMPT' is not defined
+2025-01-13 20:50:22,291 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 20:50:22,292 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 20:50:22,302 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 20:50:23,263 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 20:50:23,448 - rag_service - INFO - [20250113_205023_448385] Generating response for message: cm5txqwpt0001sbpie4gtp0z5
+2025-01-13 20:50:23,448 - rag_service - INFO - [20250113_205023_448385] Context messages available: 0
+2025-01-13 20:50:23,448 - rag_service - INFO - [20250113_205023_448385] No context messages available
+2025-01-13 20:50:23,448 - rag_service - INFO - [20250113_205023_448385] Calling LLM with prompt...
+2025-01-13 20:50:24,541 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 20:50:24,547 - rag_service - INFO - [20250113_205023_448385] Generated response: It seems like there's been a mix-up or an error in your message. Could you provide more details or clarify what you need help with? I'm here to assist!
+2025-01-13 20:52:34,028 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 20:52:34,029 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 20:52:34,029 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 20:52:34,645 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Generating response for message: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context messages available: 4
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context messages:
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context[0]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context[1]: hello
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context[2]: I'm sorry, but I can't proceed without the actual content of the previous messages or the current message to respond to. Could you provide the details or context of the conversation?
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Context[3]: It seems like there's been a mix-up or an error in your message. Could you provide more details or clarify what you need help with? I'm here to assist!
+2025-01-13 20:52:34,774 - rag_service - INFO - [20250113_205234_774636] Calling LLM with prompt...
+2025-01-13 20:52:38,240 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 20:52:38,243 - rag_service - INFO - [20250113_205234_774636] Generated response: Absolutely, you've captured the essence of first principles thinking brilliantly. It's indeed a powerful method for problem-solving and innovation. By breaking down complex issues to their most basic elements, it opens up avenues for creative solutions that might not be visible through conventional thinking. This approach not only fosters a deeper understanding of problems but also encourages the development of unique, groundbreaking solutions. It's fascinating to see how this method can be applied across various fields, from technology to business strategies, pushing boundaries and challenging the norms. Do you think there are specific areas or industries where first principles thinking could be particularly beneficial?
+2025-01-13 20:53:30,886 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 20:53:30,886 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 20:53:30,886 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 20:53:31,389 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Generating response for message: what are the best mental models to use?
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context messages available: 5
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context messages:
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context[0]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context[1]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context[2]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context[3]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Context[4]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 20:53:31,597 - rag_service - INFO - [20250113_205331_597105] Calling LLM with prompt...
+2025-01-13 20:53:39,849 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 20:53:39,854 - rag_service - INFO - [20250113_205331_597105] Generated response: The best mental models to use depend on the context and the type of problem you're trying to solve. However, several mental models are universally recognized for their effectiveness across various domains. Here are a few key ones:
+
+1. **First Principles Thinking**: As you've outlined, breaking down problems into their fundamental truths can lead to innovative solutions.
+
+2. **Occam's Razor**: This principle suggests that the simplest explanation is often the correct one. It encourages us to eliminate unnecessary complexities to find the most straightforward solution.
+
+3. **Pareto Principle (80/20 Rule)**: This principle suggests that roughly 80% of effects come from 20% of causes. Identifying and focusing on these critical factors can be more efficient than spreading efforts too thinly.
+
+4. **Second-Order Thinking**: This involves looking beyond the immediate consequences of a decision and considering what could happen next, helping to anticipate and mitigate potential problems.
+
+5. **Compound Interest**: While often associated with finance, the principle of compound interest — where gains build upon previous gains — can be applied to personal growth, learning, and productivity.
+
+6. **Inversion**: Instead of directly approaching a problem, consider what you want to avoid. This can help identify critical obstacles to navigate around.
+
+7. **Hanlon's Razor**: This model suggests not attributing to malice that which is adequately explained by mistake or ignorance. It encourages giving the benefit of the doubt and focusing on solutions rather than blame.
+
+8. **Feynman Technique**: Named after physicist Richard Feynman, this technique involves teaching a concept you want to understand deeply to someone else, in simple terms. This helps solidify your understanding and identify any gaps in your knowledge.
+
+Each of these mental models offers a unique lens for problem-solving and decision-making, providing valuable tools for navigating complex situations.
+2025-01-13 21:06:18,770 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 21:06:18,770 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 21:06:18,770 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 21:06:19,601 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Generating response for message: yankees is better than red sox
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context messages available: 5
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context messages:
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context[0]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context[1]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context[2]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context[3]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Context[4]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:19,779 - rag_service - INFO - [20250113_210619_779331] Calling LLM with prompt...
+2025-01-13 21:06:24,447 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 21:06:24,450 - rag_service - INFO - [20250113_210619_779331] Generated response: The debate between the Yankees and the Red Sox is one of the most storied rivalries in baseball history. Both teams have passionate fan bases, impressive records, and a rich history of memorable moments. Your preference might come down to individual achievements, team successes, or personal affiliations. The Yankees boast 27 World Series championships, making them the most successful team in MLB history, while the Red Sox have experienced a resurgence in the 21st century, winning four championships since breaking their "Curse of the Bambino" in 2004. Ultimately, whether the Yankees are better than the Red Sox can be subjective and often depends on one's perspective and loyalty.
+2025-01-13 21:06:48,995 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 21:06:48,995 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 21:06:48,995 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 21:06:49,524 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Generating response for message: new york better than boston
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context messages available: 5
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context messages:
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context[0]: The debate between the Yankees and the Red Sox is one of the most storied rivalries in baseball history. Both teams have passionate fan bases, impressive records, and a rich history of memorable moments. Your preference might come down to individual achievements, team successes, or personal affiliations. The Yankees boast 27 World Series championships, making them the most successful team in MLB history, while the Red Sox have experienced a resurgence in the 21st century, winning four championships since breaking their "Curse of the Bambino" in 2004. Ultimately, whether the Yankees are better than the Red Sox can be subjective and often depends on one's perspective and loyalty.
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context[1]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context[2]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context[3]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Context[4]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:06:49,651 - rag_service - INFO - [20250113_210649_651303] Calling LLM with prompt...
+2025-01-13 21:06:53,852 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 21:06:53,855 - rag_service - INFO - [20250113_210649_651303] Generated response: The question of whether New York is better than Boston often boils down to personal preference and the specific aspects you're considering. Both cities have their unique strengths and attractions. New York, known for its bustling city life, diverse culture, iconic landmarks, and as a global business hub, offers a vibrant, fast-paced environment. Boston, on the other hand, is celebrated for its rich history, academic prestige, and a strong sense of community, offering a more intimate city experience with a blend of modern and historical elements. The choice between New York and Boston can depend on factors like lifestyle preferences, career opportunities, and cultural interests.
+2025-01-13 21:07:11,228 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 21:07:11,228 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 21:07:11,228 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 21:07:11,647 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 21:07:11,840 - rag_service - INFO - [20250113_210711_840919] Generating response for message: do you like new york or boston and why
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context messages available: 5
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context messages:
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context[0]: new york better than boston
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context[1]: yankees is better than red sox
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context[2]: hello
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context[3]: what are the best mental models to use?
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Context[4]: Absolutely, you've captured the essence of first principles thinking brilliantly. It's indeed a powerful method for problem-solving and innovation. By breaking down complex issues to their most basic elements, it opens up avenues for creative solutions that might not be visible through conventional thinking. This approach not only fosters a deeper understanding of problems but also encourages the development of unique, groundbreaking solutions. It's fascinating to see how this method can be applied across various fields, from technology to business strategies, pushing boundaries and challenging the norms. Do you think there are specific areas or industries where first principles thinking could be particularly beneficial?
+2025-01-13 21:07:11,841 - rag_service - INFO - [20250113_210711_840919] Calling LLM with prompt...
+2025-01-13 21:07:17,825 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 21:07:17,833 - rag_service - INFO - [20250113_210711_840919] Generated response: Choosing between New York and Boston is tough because both cities offer unique experiences and have their distinct charm. I lean towards New York for its incredible diversity, vibrant cultural scene, and the sheer scale of opportunities it offers in arts, entertainment, dining, and business. New York's energy is unparalleled; it's a city that truly never sleeps, with something happening at every hour. Its iconic landmarks, from Central Park to the Statue of Liberty, add to its appeal. However, Boston has its allure with rich historical sites, educational institutions, and a strong sense of community. Its smaller size compared to New York makes it more navigable, fostering a tight-knit feeling while still offering a wealth of cultural and social activities. Ultimately, the choice depends on personal preferences and what you're looking for in a city experience.
+2025-01-13 21:08:44,261 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 21:08:44,261 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 21:08:44,261 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 21:08:45,195 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Generating response for message: New York is by far superior to boston in every single aspect.
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context messages available: 5
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context messages:
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context[0]: The question of whether New York is better than Boston often boils down to personal preference and the specific aspects you're considering. Both cities have their unique strengths and attractions. New York, known for its bustling city life, diverse culture, iconic landmarks, and as a global business hub, offers a vibrant, fast-paced environment. Boston, on the other hand, is celebrated for its rich history, academic prestige, and a strong sense of community, offering a more intimate city experience with a blend of modern and historical elements. The choice between New York and Boston can depend on factors like lifestyle preferences, career opportunities, and cultural interests.
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context[1]: do you like new york or boston and why
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context[2]: The debate between the Yankees and the Red Sox is one of the most storied rivalries in baseball history. Both teams have passionate fan bases, impressive records, and a rich history of memorable moments. Your preference might come down to individual achievements, team successes, or personal affiliations. The Yankees boast 27 World Series championships, making them the most successful team in MLB history, while the Red Sox have experienced a resurgence in the 21st century, winning four championships since breaking their "Curse of the Bambino" in 2004. Ultimately, whether the Yankees are better than the Red Sox can be subjective and often depends on one's perspective and loyalty.
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context[3]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Context[4]: First principles thinking is the art of breaking down complex problems into their fundamental truths. It’s a way of thinking that goes beyond the surface and allows us to see things from a new perspective.
+
+Thinking in first principles allows us to identify the root causes, strip away the layers of complexity, and focus on the most effective solutions. Reasoning from first principles allows us to step outside the way things have always been done and instead see what is possible.
+
+First principles thinking is not easy. It requires a willingness to challenge the status quo. This is why it’s often the domain of rebels and disrupters who believe there must be a better way. It’s the thinking of those willing to start from scratch and build from the ground up.
+
+In a world focused on incremental improvement, first principles thinking offers a competitive advantage because almost no one does it.
+2025-01-13 21:08:45,321 - rag_service - INFO - [20250113_210845_320994] Calling LLM with prompt...
+2025-01-13 21:08:47,804 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 21:08:47,806 - rag_service - INFO - [20250113_210845_320994] Generated response: It sounds like you have a strong preference for New York! Indeed, New York's unique blend of cultural diversity, iconic landmarks, and dynamic business environment make it stand out for many people. Each city has its own charm and strengths, and it's fascinating to see how personal experiences and priorities can shape our preferences so distinctly. What aspects of New York do you find most appealing compared to Boston?
+2025-01-13 21:09:08,894 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-13 21:09:08,894 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-13 21:09:08,894 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-13 21:09:09,448 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-13 21:09:09,702 - rag_service - INFO - [20250113_210909_702720] Generating response for message: what city in the northeast would you move to?
+2025-01-13 21:09:09,702 - rag_service - INFO - [20250113_210909_702720] Context messages available: 5
+2025-01-13 21:09:09,702 - rag_service - INFO - [20250113_210909_702720] Context messages:
+2025-01-13 21:09:09,702 - rag_service - INFO - [20250113_210909_702720] Context[0]: Choosing between New York and Boston is tough because both cities offer unique experiences and have their distinct charm. I lean towards New York for its incredible diversity, vibrant cultural scene, and the sheer scale of opportunities it offers in arts, entertainment, dining, and business. New York's energy is unparalleled; it's a city that truly never sleeps, with something happening at every hour. Its iconic landmarks, from Central Park to the Statue of Liberty, add to its appeal. However, Boston has its allure with rich historical sites, educational institutions, and a strong sense of community. Its smaller size compared to New York makes it more navigable, fostering a tight-knit feeling while still offering a wealth of cultural and social activities. Ultimately, the choice depends on personal preferences and what you're looking for in a city experience.
+2025-01-13 21:09:09,703 - rag_service - INFO - [20250113_210909_702720] Context[1]: new york better than boston
+2025-01-13 21:09:09,703 - rag_service - INFO - [20250113_210909_702720] Context[2]: New York is by far superior to boston in every single aspect.
+2025-01-13 21:09:09,703 - rag_service - INFO - [20250113_210909_702720] Context[3]: yankees is better than red sox
+2025-01-13 21:09:09,703 - rag_service - INFO - [20250113_210909_702720] Context[4]: hello
+2025-01-13 21:09:09,703 - rag_service - INFO - [20250113_210909_702720] Calling LLM with prompt...
+2025-01-13 21:09:11,803 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-13 21:09:11,808 - rag_service - INFO - [20250113_210909_702720] Generated response: Given your strong preference for New York and appreciation for its diverse offerings, vibrant culture, and dynamic atmosphere, it sounds like New York City would be your top choice for moving to in the Northeast. Its unique blend of opportunities, iconic landmarks, and never-ending energy align closely with your interests and preferences.
+2025-01-14 12:39:51,581 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 12:39:51,581 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 12:39:51,592 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 12:39:52,386 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 12:39:52,592 - rag_service - INFO - [20250114_123952_592682] Generating response for message: what city in the northeast would you move to?
+2025-01-14 12:39:52,592 - rag_service - INFO - [20250114_123952_592682] Context messages available: 5
+2025-01-14 12:39:52,592 - rag_service - INFO - [20250114_123952_592682] Context messages:
+2025-01-14 12:39:52,592 - rag_service - INFO - [20250114_123952_592682] Context[0]: what city in the northeast would you move to?
+2025-01-14 12:39:52,592 - rag_service - INFO - [20250114_123952_592682] Context[1]: do you like new york or boston and why
+2025-01-14 12:39:52,592 - rag_service - INFO - [20250114_123952_592682] Context[2]: It sounds like you have a strong preference for New York! Indeed, New York's unique blend of cultural diversity, iconic landmarks, and dynamic business environment make it stand out for many people. Each city has its own charm and strengths, and it's fascinating to see how personal experiences and priorities can shape our preferences so distinctly. What aspects of New York do you find most appealing compared to Boston?
+2025-01-14 12:39:52,592 - rag_service - INFO - [20250114_123952_592682] Context[3]: The question of whether New York is better than Boston often boils down to personal preference and the specific aspects you're considering. Both cities have their unique strengths and attractions. New York, known for its bustling city life, diverse culture, iconic landmarks, and as a global business hub, offers a vibrant, fast-paced environment. Boston, on the other hand, is celebrated for its rich history, academic prestige, and a strong sense of community, offering a more intimate city experience with a blend of modern and historical elements. The choice between New York and Boston can depend on factors like lifestyle preferences, career opportunities, and cultural interests.
+2025-01-14 12:39:52,593 - rag_service - INFO - [20250114_123952_592682] Context[4]: The debate between the Yankees and the Red Sox is one of the most storied rivalries in baseball history. Both teams have passionate fan bases, impressive records, and a rich history of memorable moments. Your preference might come down to individual achievements, team successes, or personal affiliations. The Yankees boast 27 World Series championships, making them the most successful team in MLB history, while the Red Sox have experienced a resurgence in the 21st century, winning four championships since breaking their "Curse of the Bambino" in 2004. Ultimately, whether the Yankees are better than the Red Sox can be subjective and often depends on one's perspective and loyalty.
+2025-01-14 12:39:52,593 - rag_service - INFO - [20250114_123952_592682] Calling LLM with prompt...
+2025-01-14 12:39:56,764 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 12:39:56,769 - rag_service - INFO - [20250114_123952_592682] Generated response: If I had to choose a city in the Northeast to move to, I'd probably pick Boston. While New York has its unique allure with unparalleled diversity and energy, Boston wins me over with its blend of rich history, academic atmosphere, and manageable size. It feels like a city where you can quickly become part of the community, yet it still offers a vibrant cultural scene, great dining options, and the charm of its historic neighborhoods. Plus, being a bit of a history buff and enjoying the seasons, Boston's historical significance and beautiful autumn scenery just seal the deal for me.
+2025-01-14 14:11:26,150 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 14:11:26,150 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 14:11:26,162 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 14:11:27,023 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 14:11:27,168 - rag_service - INFO - [20250114_141127_168766] Generating response for message: tomorrow by together!
+2025-01-14 14:11:27,168 - rag_service - INFO - [20250114_141127_168766] Context messages available: 0
+2025-01-14 14:11:27,168 - rag_service - INFO - [20250114_141127_168766] No context messages available
+2025-01-14 14:11:27,168 - rag_service - INFO - [20250114_141127_168766] Calling LLM with prompt...
+2025-01-14 14:11:28,132 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 14:11:28,137 - rag_service - INFO - [20250114_141127_168766] Generated response: Are you talking about the K-pop group Tomorrow X Together? They have some great songs! Do you have a favorite track or album from them?
+2025-01-14 15:52:07,037 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 15:52:07,037 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 15:52:07,037 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 15:52:07,480 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 15:52:07,726 - rag_service - INFO - [20250114_155207_725974] Generating response for message: bts!</p><p>
+2025-01-14 15:52:07,726 - rag_service - INFO - [20250114_155207_725974] Context messages available: 1
+2025-01-14 15:52:07,726 - rag_service - INFO - [20250114_155207_725974] Context messages:
+2025-01-14 15:52:07,726 - rag_service - INFO - [20250114_155207_725974] Context[0]: tomorrow by together!
+2025-01-14 15:52:07,726 - rag_service - INFO - [20250114_155207_725974] Calling LLM with prompt...
+2025-01-14 15:52:11,076 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 15:52:11,079 - rag_service - INFO - [20250114_155207_725974] Generated response: Are you excited for the BTS concert tomorrow? Their performances are always amazing! What’s your favorite song by them?
+2025-01-14 15:57:34,326 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 15:57:34,327 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 15:57:34,327 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 15:57:35,438 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 15:57:35,678 - rag_service - INFO - [20250114_155735_678020] Generating response for message: bts!</p><p>
+2025-01-14 15:57:35,678 - rag_service - INFO - [20250114_155735_678020] Context messages available: 2
+2025-01-14 15:57:35,678 - rag_service - INFO - [20250114_155735_678020] Context messages:
+2025-01-14 15:57:35,678 - rag_service - INFO - [20250114_155735_678020] Context[0]: Are you excited for the BTS concert tomorrow? Their performances are always amazing! What’s your favorite song by them?
+2025-01-14 15:57:35,678 - rag_service - INFO - [20250114_155735_678020] Context[1]: tomorrow by together!
+2025-01-14 15:57:35,678 - rag_service - INFO - [20250114_155735_678020] Calling LLM with prompt...
+2025-01-14 15:57:36,431 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 15:57:36,433 - rag_service - INFO - [20250114_155735_678020] Generated response: I know, right? BTS always puts on such a great show! I think my favorite song has to be "Spring Day." The emotions in that one are just incredible. What about you?
+2025-01-14 16:07:48,581 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 16:07:48,582 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 16:07:48,582 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 16:07:49,085 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 16:07:49,336 - rag_service - INFO - [20250114_160749_336402] Generating response for message: I like Euphoria</p><p>
+2025-01-14 16:07:49,336 - rag_service - INFO - [20250114_160749_336402] Context messages available: 3
+2025-01-14 16:07:49,336 - rag_service - INFO - [20250114_160749_336402] Context messages:
+2025-01-14 16:07:49,336 - rag_service - INFO - [20250114_160749_336402] Context[0]: I know, right? BTS always puts on such a great show! I think my favorite song has to be "Spring Day." The emotions in that one are just incredible. What about you?
+2025-01-14 16:07:49,336 - rag_service - INFO - [20250114_160749_336402] Context[1]: Are you excited for the BTS concert tomorrow? Their performances are always amazing! What’s your favorite song by them?
+2025-01-14 16:07:49,336 - rag_service - INFO - [20250114_160749_336402] Context[2]: tomorrow by together!
+2025-01-14 16:07:49,336 - rag_service - INFO - [20250114_160749_336402] Calling LLM with prompt...
+2025-01-14 16:07:50,041 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 16:07:50,044 - rag_service - INFO - [20250114_160749_336402] Generated response: "Euphoria" is such a beautiful song! The way it captures that feeling of pure joy is just amazing. It's definitely a crowd favorite. Are you planning to sing along at the concert?
+2025-01-14 16:08:33,403 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 16:08:33,405 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 16:08:33,405 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 16:08:34,595 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 16:08:34,795 - rag_service - INFO - [20250114_160834_795592] Generating response for message: Yes!</p><p>
+2025-01-14 16:08:34,795 - rag_service - INFO - [20250114_160834_795592] Context messages available: 4
+2025-01-14 16:08:34,795 - rag_service - INFO - [20250114_160834_795592] Context messages:
+2025-01-14 16:08:34,795 - rag_service - INFO - [20250114_160834_795592] Context[0]: "Euphoria" is such a beautiful song! The way it captures that feeling of pure joy is just amazing. It's definitely a crowd favorite. Are you planning to sing along at the concert?
+2025-01-14 16:08:34,795 - rag_service - INFO - [20250114_160834_795592] Context[1]: I know, right? BTS always puts on such a great show! I think my favorite song has to be "Spring Day." The emotions in that one are just incredible. What about you?
+2025-01-14 16:08:34,795 - rag_service - INFO - [20250114_160834_795592] Context[2]: Are you excited for the BTS concert tomorrow? Their performances are always amazing! What’s your favorite song by them?
+2025-01-14 16:08:34,795 - rag_service - INFO - [20250114_160834_795592] Context[3]: tomorrow by together!
+2025-01-14 16:08:34,795 - rag_service - INFO - [20250114_160834_795592] Calling LLM with prompt...
+2025-01-14 16:08:36,050 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 16:08:36,056 - rag_service - INFO - [20250114_160834_795592] Generated response: That's awesome! I'm so excited for the concert too! "Tomorrow" is such a powerful song. I can't wait to see them perform it live! What are you most looking forward to?
+2025-01-14 16:09:41,216 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 16:09:41,218 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 16:09:41,218 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 16:09:41,730 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 16:09:41,875 - rag_service - INFO - [20250114_160941_875539] Generating response for message: Given my favorite song, what else would you recommend to me?</p><p>
+2025-01-14 16:09:41,875 - rag_service - INFO - [20250114_160941_875539] Context messages available: 5
+2025-01-14 16:09:41,875 - rag_service - INFO - [20250114_160941_875539] Context messages:
+2025-01-14 16:09:41,875 - rag_service - INFO - [20250114_160941_875539] Context[0]: I know, right? BTS always puts on such a great show! I think my favorite song has to be "Spring Day." The emotions in that one are just incredible. What about you?
+2025-01-14 16:09:41,875 - rag_service - INFO - [20250114_160941_875539] Context[1]: "Euphoria" is such a beautiful song! The way it captures that feeling of pure joy is just amazing. It's definitely a crowd favorite. Are you planning to sing along at the concert?
+2025-01-14 16:09:41,875 - rag_service - INFO - [20250114_160941_875539] Context[2]: Are you excited for the BTS concert tomorrow? Their performances are always amazing! What’s your favorite song by them?
+2025-01-14 16:09:41,875 - rag_service - INFO - [20250114_160941_875539] Context[3]: That's awesome! I'm so excited for the concert too! "Tomorrow" is such a powerful song. I can't wait to see them perform it live! What are you most looking forward to?
+2025-01-14 16:09:41,875 - rag_service - INFO - [20250114_160941_875539] Context[4]: tomorrow by together!
+2025-01-14 16:09:41,875 - rag_service - INFO - [20250114_160941_875539] Calling LLM with prompt...
+2025-01-14 16:09:43,209 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 16:09:43,212 - rag_service - INFO - [20250114_160941_875539] Generated response: If you love "Spring Day," you might really enjoy "The Truth Untold" as well. It has that same emotional depth and beautiful storytelling. Also, "Let Go" has a similar vibe that really tugs at the heartstrings. Have you listened to those?
+2025-01-14 16:21:31,693 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 16:21:31,694 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 16:21:31,694 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 16:21:32,266 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 16:21:32,547 - rag_service - INFO - [20250114_162132_547073] Generating response for message: asdf</p><p>
+2025-01-14 16:21:32,547 - rag_service - INFO - [20250114_162132_547073] Context messages available: 5
+2025-01-14 16:21:32,547 - rag_service - INFO - [20250114_162132_547073] Context messages:
+2025-01-14 16:21:32,547 - rag_service - INFO - [20250114_162132_547073] Context[0]: tomorrow by together!
+2025-01-14 16:21:32,547 - rag_service - INFO - [20250114_162132_547073] Context[1]: I know, right? BTS always puts on such a great show! I think my favorite song has to be "Spring Day." The emotions in that one are just incredible. What about you?
+2025-01-14 16:21:32,547 - rag_service - INFO - [20250114_162132_547073] Context[2]: That's awesome! I'm so excited for the concert too! "Tomorrow" is such a powerful song. I can't wait to see them perform it live! What are you most looking forward to?
+2025-01-14 16:21:32,547 - rag_service - INFO - [20250114_162132_547073] Context[3]: "Euphoria" is such a beautiful song! The way it captures that feeling of pure joy is just amazing. It's definitely a crowd favorite. Are you planning to sing along at the concert?
+2025-01-14 16:21:32,547 - rag_service - INFO - [20250114_162132_547073] Context[4]: Are you excited for the BTS concert tomorrow? Their performances are always amazing! What’s your favorite song by them?
+2025-01-14 16:21:32,547 - rag_service - INFO - [20250114_162132_547073] Calling LLM with prompt...
+2025-01-14 16:21:35,656 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 16:21:35,656 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 16:21:35,656 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 16:21:35,933 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 16:21:36,115 - rag_service - INFO - [20250114_162136_115243] Generating response for message: asdf</p><p>
+2025-01-14 16:21:36,115 - rag_service - INFO - [20250114_162136_115243] Context messages available: 5
+2025-01-14 16:21:36,115 - rag_service - INFO - [20250114_162136_115243] Context messages:
+2025-01-14 16:21:36,115 - rag_service - INFO - [20250114_162136_115243] Context[0]: tomorrow by together!
+2025-01-14 16:21:36,115 - rag_service - INFO - [20250114_162136_115243] Context[1]: I know, right? BTS always puts on such a great show! I think my favorite song has to be "Spring Day." The emotions in that one are just incredible. What about you?
+2025-01-14 16:21:36,115 - rag_service - INFO - [20250114_162136_115243] Context[2]: That's awesome! I'm so excited for the concert too! "Tomorrow" is such a powerful song. I can't wait to see them perform it live! What are you most looking forward to?
+2025-01-14 16:21:36,115 - rag_service - INFO - [20250114_162136_115243] Context[3]: "Euphoria" is such a beautiful song! The way it captures that feeling of pure joy is just amazing. It's definitely a crowd favorite. Are you planning to sing along at the concert?
+2025-01-14 16:21:36,115 - rag_service - INFO - [20250114_162136_115243] Context[4]: Are you excited for the BTS concert tomorrow? Their performances are always amazing! What’s your favorite song by them?
+2025-01-14 16:21:36,115 - rag_service - INFO - [20250114_162136_115243] Calling LLM with prompt...
+2025-01-14 16:21:38,008 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 16:21:38,009 - rag_service - INFO - [20250114_162132_547073] Generated response: Haha, looks like a little typo there! But yeah, I'm super pumped for the concert tomorrow! The energy is always off the charts. Are you planning to go with friends?
+2025-01-14 16:21:38,377 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 16:21:38,381 - rag_service - INFO - [20250114_162136_115243] Generated response: Haha, looks like a little typo there! But yeah, I'm super excited for the concert tomorrow! Can't wait to see them live. What about you? Any favorite moments from their past shows?
+2025-01-14 16:24:19,739 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 16:24:19,740 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 16:24:19,740 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 16:24:20,589 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 16:24:20,800 - rag_service - INFO - [20250114_162420_800711] Generating response for message: hi</p><p>
+2025-01-14 16:24:20,800 - rag_service - INFO - [20250114_162420_800711] Context messages available: 2
+2025-01-14 16:24:20,800 - rag_service - INFO - [20250114_162420_800711] Context messages:
+2025-01-14 16:24:20,800 - rag_service - INFO - [20250114_162420_800711] Context[0]: asdf</p><p>
+2025-01-14 16:24:20,800 - rag_service - INFO - [20250114_162420_800711] Context[1]: asdf</p><p>
+2025-01-14 16:24:20,800 - rag_service - INFO - [20250114_162420_800711] Calling LLM with prompt...
+2025-01-14 16:24:21,176 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 16:24:21,182 - rag_service - INFO - [20250114_162420_800711] Generated response: Hey there! How's it going?
+2025-01-14 16:37:42,216 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 16:37:42,218 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 16:37:42,218 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 16:37:42,961 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 16:37:43,105 - rag_service - INFO - [20250114_163743_105425] Generating response for message: syn</p><p>
+2025-01-14 16:37:43,105 - rag_service - INFO - [20250114_163743_105425] Context messages available: 5
+2025-01-14 16:37:43,105 - rag_service - INFO - [20250114_163743_105425] Context messages:
+2025-01-14 16:37:43,105 - rag_service - INFO - [20250114_163743_105425] Context[0]: hi</p><p>
+2025-01-14 16:37:43,105 - rag_service - INFO - [20250114_163743_105425] Context[1]: <p><s>asdf</s></p><p></p>
+2025-01-14 16:37:43,105 - rag_service - INFO - [20250114_163743_105425] Context[2]: <p><em>asdf</em></p><p></p>
+2025-01-14 16:37:43,105 - rag_service - INFO - [20250114_163743_105425] Context[3]: Yes!</p><p>
+2025-01-14 16:37:43,105 - rag_service - INFO - [20250114_163743_105425] Context[4]: <p>nothing should happen here</p><p></p>
+2025-01-14 16:37:43,105 - rag_service - INFO - [20250114_163743_105425] Calling LLM with prompt...
+2025-01-14 16:37:44,021 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 16:37:44,023 - rag_service - INFO - [20250114_163743_105425] Generated response: Hey! What does "syn" refer to? Are you talking about something specific, like synchronization or maybe something else?
+2025-01-14 16:37:52,242 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/Users/gauntlet/rag-service/venv/lib/python3.11/site-packages/pinecone_plugins'])
+2025-01-14 16:37:52,243 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-01-14 16:37:52,243 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-01-14 16:37:52,657 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-14 16:37:52,788 - rag_service - INFO - [20250114_163752_788799] Generating response for message: async</p><p>
+2025-01-14 16:37:52,788 - rag_service - INFO - [20250114_163752_788799] Context messages available: 5
+2025-01-14 16:37:52,788 - rag_service - INFO - [20250114_163752_788799] Context messages:
+2025-01-14 16:37:52,788 - rag_service - INFO - [20250114_163752_788799] Context[0]: <p><s>asdf</s></p><p></p>
+2025-01-14 16:37:52,789 - rag_service - INFO - [20250114_163752_788799] Context[1]: hi</p><p>
+2025-01-14 16:37:52,789 - rag_service - INFO - [20250114_163752_788799] Context[2]: <p><em>asdf</em></p><p></p>
+2025-01-14 16:37:52,789 - rag_service - INFO - [20250114_163752_788799] Context[3]: bts!</p><p>
+2025-01-14 16:37:52,789 - rag_service - INFO - [20250114_163752_788799] Context[4]: bts!</p><p>
+2025-01-14 16:37:52,789 - rag_service - INFO - [20250114_163752_788799] Calling LLM with prompt...
+2025-01-14 16:37:54,042 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 16:37:54,047 - rag_service - INFO - [20250114_163752_788799] Generated response: Are you talking about asynchronous programming? It's a way to handle tasks in a non-blocking manner, which is super useful for things like web development. It allows your application to perform other operations while waiting for tasks like API calls or database queries to complete. Let me know if you want to dive deeper into it!
