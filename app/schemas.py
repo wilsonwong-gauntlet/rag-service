@@ -32,3 +32,16 @@ class AIResponse(BaseModel):
     response: str
     confidence: float
     sourceMessages: List[SearchResult]
+
+class ProcessDocumentRequest(BaseModel):
+    documentId: str
+    workspaceId: str
+    fileUrl: str
+    fileName: str
+    fileType: str
+
+class ProcessDocumentResponse(BaseModel):
+    success: bool
+    documentId: str
+    chunks: Optional[int] = None
+    error: Optional[str] = None
