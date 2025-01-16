@@ -1,6 +1,10 @@
 from fastapi import FastAPI, HTTPException
-from .schemas import MessageEvent, SearchQuery, SearchResult, AIResponse, GenerateRequest, ProcessDocumentRequest, ProcessDocumentResponse
-from .processor import process_message, embeddings, process_document
+from .schemas import (
+    MessageEvent, SearchQuery, SearchResult, AIResponse, 
+    GenerateRequest, ProcessDocumentRequest, ProcessDocumentResponse,
+    DeleteDocumentRequest, DeleteDocumentResponse
+)
+from .processor import process_message, embeddings, process_document, delete_document
 from .llm import generate_contextual_response
 from langchain_pinecone import PineconeVectorStore
 import os
@@ -115,5 +119,24 @@ async def handle_process_document(request: ProcessDocumentRequest):
         return ProcessDocumentResponse(
             success=False,
             documentId=request.documentId,
+            error=str(e)
+        ) 
+
+@app.post("/delete-document", response_model=DeleteDocumentResponse)
+async def handle_delete_document(request: DeleteDocumentRequest):
+    """Delete a document and its chunks from the vector store"""
+    try:
+        # Queue the delete task
+        task = delete_document.delay(
+            request.documentId,
+            request.workspaceId,
+            request.callbackUrl,
+            request.callbackToken
+        )
+        result = task.get()  # Wait for the result
+        return result
+    except Exception as e:
+        return DeleteDocumentResponse(
+            success=False,
             error=str(e)
         ) 
