@@ -26,7 +26,9 @@ class GenerateRequest(BaseModel):
 
 class SearchResult(BaseModel):
     content: str
-    messageId: str
+    messageId: Optional[str] = None
+    documentId: Optional[str] = None
+    documentName: Optional[str] = None
 
 class AIResponse(BaseModel):
     response: str
@@ -55,3 +57,8 @@ class ProcessDocumentResponse(BaseModel):
 # class DeleteDocumentResponse(BaseModel):
 #     success: bool
 #     error: Optional[str] = None
+
+class KnowledgeBaseRequest(BaseModel):
+    query: str
+    workspaceId: str
+    limit: int = 5

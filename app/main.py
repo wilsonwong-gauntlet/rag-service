@@ -2,10 +2,10 @@ from fastapi import FastAPI, HTTPException
 from .schemas import (
     MessageEvent, SearchQuery, SearchResult, AIResponse, 
     GenerateRequest, ProcessDocumentRequest, ProcessDocumentResponse,
-    # DeleteDocumentRequest, DeleteDocumentResponse
+    KnowledgeBaseRequest
 )
 from .processor import process_message, embeddings, process_document # , delete_document
-from .llm import generate_contextual_response
+from .llm import generate_contextual_response, generate_knowledge_base_response
 from langchain_pinecone import PineconeVectorStore
 import os
 from dotenv import load_dotenv
@@ -140,3 +140,45 @@ async def handle_process_document(request: ProcessDocumentRequest):
 #             success=False,
 #             error=str(e)
 #         ) 
+
+@app.post("/knowledge-base/generate", response_model=AIResponse)
+async def generate_knowledge_base_response(query: KnowledgeBaseRequest):
+    """Generate an AI response using workspace documents"""
+    try:
+        # Build filter based on workspace only
+        filter_dict = {
+            "workspaceId": query.workspaceId
+        }
+
+        vector_store = PineconeVectorStore.from_existing_index(
+            index_name=os.getenv('PINECONE_INDEX'),
+            embedding=embeddings
+        )
+        
+        # Get relevant context from documents
+        results = vector_store.similarity_search_with_score(
+            query.query,
+            k=query.limit,
+            filter=filter_dict
+        )
+        
+        # Generate response using knowledge base LLM prompt
+        response = await generate_knowledge_base_response(
+            query=query.query,
+            document_contexts=[doc.page_content for doc, score in results]
+        )
+        
+        return AIResponse(
+            response=response,
+            confidence=1.0 if results else 0.5,
+            sourceMessages=[
+                SearchResult(
+                    content=doc.page_content,
+                    documentId=doc.metadata.get("documentId"),
+                    documentName=doc.metadata.get("fileName")
+                ) for doc, score in results
+            ]
+        )
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) 

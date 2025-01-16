@@ -44,6 +44,25 @@ Current message: {current_message}
 Generate a natural response:"""),
 ])
 
+# Define knowledge base prompt template
+KNOWLEDGE_BASE_PROMPT = ChatPromptTemplate.from_messages([
+    ("system", """You are a knowledgeable assistant providing accurate information based on the given documents. Your responses should be factual, well-structured, and cite the relevant sources.
+
+Guidelines:
+- Base your responses strictly on the provided document content
+- Maintain a professional, informative tone
+- Include relevant citations when referencing specific information
+- If the documents don't contain enough information to answer fully, acknowledge the limitations
+- Structure complex responses with clear sections
+- Stay objective and factual"""),
+    ("human", """Available document excerpts:
+{context_messages}
+
+Question: {current_message}
+
+Please provide a comprehensive answer with citations:"""),
+])
+
 async def generate_contextual_response(
     current_message: str,
     context_messages: List[str]
@@ -68,6 +87,39 @@ async def generate_contextual_response(
             RESPONSE_PROMPT.format(
                 context_messages=context_str,
                 current_message=current_message
+            )
+        )
+        logger.info(f"[{request_id}] Generated response: {response.content}")
+        return response.content
+        
+    except Exception as e:
+        logger.error(f"[{request_id}] Error generating response: {str(e)}", exc_info=True)
+        raise
+
+async def generate_knowledge_base_response(
+    query: str,
+    document_contexts: List[str]
+) -> str:
+    request_id = datetime.now().strftime('%Y%m%d_%H%M%S_%f')
+    
+    logger.info(f"[{request_id}] Generating knowledge base response for query: {query}")
+    logger.info(f"[{request_id}] Document contexts available: {len(document_contexts)}")
+    
+    if document_contexts:
+        logger.info(f"[{request_id}] Document contexts:")
+        for i, ctx in enumerate(document_contexts):
+            logger.info(f"[{request_id}] Context[{i}]: {ctx}")
+    else:
+        logger.info(f"[{request_id}] No document contexts available")
+
+    context_str = "\n\n---\n\n".join(document_contexts) if document_contexts else "No relevant documents found."
+    
+    try:
+        logger.info(f"[{request_id}] Calling LLM with knowledge base prompt...")
+        response = await llm.ainvoke(
+            KNOWLEDGE_BASE_PROMPT.format(
+                context_messages=context_str,
+                current_message=query
             )
         )
         logger.info(f"[{request_id}] Generated response: {response.content}")
