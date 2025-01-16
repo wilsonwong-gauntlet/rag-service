@@ -46,6 +46,7 @@ class ProcessDocumentResponse(BaseModel):
     success: bool
     documentId: str
     chunks: Optional[int] = None
+    vectorIds: Optional[List[str]] = None
     error: Optional[str] = None
 
 # class DeleteDocumentRequest(BaseModel):
@@ -62,3 +63,12 @@ class KnowledgeBaseRequest(BaseModel):
     query: str
     workspaceId: str
     limit: int = 5
+
+class DeleteVectorsRequest(BaseModel):
+    vectorIds: List[str]
+    workspaceId: str
+
+class DeleteVectorsResponse(BaseModel):
+    success: bool
+    deletedCount: int
+    error: Optional[str] = None

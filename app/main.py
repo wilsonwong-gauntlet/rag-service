@@ -2,9 +2,10 @@ from fastapi import FastAPI, HTTPException
 from .schemas import (
     MessageEvent, SearchQuery, SearchResult, AIResponse, 
     GenerateRequest, ProcessDocumentRequest, ProcessDocumentResponse,
+    DeleteVectorsRequest, DeleteVectorsResponse,
     KnowledgeBaseRequest
 )
-from .processor import process_message, embeddings, process_document # , delete_document
+from .processor import process_message, embeddings, process_document, delete_vectors
 from .llm import generate_contextual_response, generate_knowledge_base_response
 from langchain_pinecone import PineconeVectorStore
 import os
@@ -182,3 +183,20 @@ async def generate_knowledge_base_response(query: KnowledgeBaseRequest):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e)) 
+
+@app.post("/delete-vectors", response_model=DeleteVectorsResponse)
+async def handle_delete_vectors(request: DeleteVectorsRequest):
+    """Delete vectors by their IDs, verifying workspace ownership"""
+    try:
+        task = delete_vectors.delay(
+            request.vectorIds,
+            request.workspaceId
+        )
+        result = task.get()  # Wait for the result
+        return result
+    except Exception as e:
+        return DeleteVectorsResponse(
+            success=False,
+            deletedCount=0,
+            error=str(e)
+        ) 

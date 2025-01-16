@@ -94,6 +94,9 @@ def process_document(
             # Chunk the document
             chunks = chunk_document(texts)
             
+            # Generate vector IDs
+            vector_ids = [f"{document_id}_{i}" for i in range(len(chunks))]
+            
             # Prepare metadata for each chunk
             metadatas = [{
                 "documentId": document_id,
@@ -102,12 +105,13 @@ def process_document(
                 "chunkIndex": i
             } for i in range(len(chunks))]
             
-            # Store in vector database
+            # Store in vector database with explicit IDs
             vector_store = PineconeVectorStore.from_texts(
                 chunks,
                 embeddings,
                 index_name=os.getenv('PINECONE_INDEX'),
-                metadatas=metadatas
+                metadatas=metadatas,
+                ids=vector_ids
             )
             
             # Cleanup temporary file
@@ -116,7 +120,8 @@ def process_document(
             return {
                 "success": True,
                 "documentId": document_id,
-                "chunks": len(chunks)
+                "chunks": len(chunks),
+                "vectorIds": vector_ids
             }
             
     except Exception as e:
@@ -193,3 +198,48 @@ def process_document(
 #             send_callback_sync(callback_url, callback_token, callback_data)
 #         
 #         return error_result
+
+@celery_app.task(bind=True, max_retries=3)
+def delete_vectors(
+    self,
+    vector_ids: List[str],
+    workspace_id: str
+) -> Dict[str, Any]:
+    try:
+        # Initialize vector store
+        vector_store = PineconeVectorStore.from_existing_index(
+            index_name=os.getenv('PINECONE_INDEX'),
+            embedding=embeddings
+        )
+        
+        # First verify these vectors belong to the workspace
+        results = vector_store.similarity_search(
+            query="",  # Dummy query
+            k=1,
+            filter={
+                "workspaceId": workspace_id,
+                "documentId": {"$in": [vid.split('_')[0] for vid in vector_ids]}  # Extract document IDs
+            }
+        )
+        
+        if not results:
+            return {
+                "success": False,
+                "deletedCount": 0,
+                "error": "No matching vectors found in workspace"
+            }
+        
+        # Delete vectors by their IDs
+        vector_store.delete(ids=vector_ids)
+        
+        return {
+            "success": True,
+            "deletedCount": len(vector_ids)
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "deletedCount": 0,
+            "error": str(e)
+        }
