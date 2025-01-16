@@ -46,12 +46,12 @@ class ProcessDocumentResponse(BaseModel):
     chunks: Optional[int] = None
     error: Optional[str] = None
 
-class DeleteDocumentRequest(BaseModel):
-    documentId: str
-    workspaceId: str
-    callbackUrl: Optional[str] = None
-    callbackToken: Optional[str] = None
+# class DeleteDocumentRequest(BaseModel):
+#     documentId: str
+#     workspaceId: str
+#     callbackUrl: Optional[str] = None
+#     callbackToken: Optional[str] = None
 
-class DeleteDocumentResponse(BaseModel):
-    success: bool
-    error: Optional[str] = None
+# class DeleteDocumentResponse(BaseModel):
+#     success: bool
+#     error: Optional[str] = None

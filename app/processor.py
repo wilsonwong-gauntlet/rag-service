@@ -126,68 +126,70 @@ def process_document(
             "error": str(e)
         }
 
-def send_callback_sync(url: str, token: str, data: Dict[str, Any]):
-    with httpx.Client() as client:
-        try:
-            client.post(
-                url,
-                json=data,
-                headers={"x-callback-token": token},
-                timeout=10.0
-            )
-        except Exception as e:
-            print(f"Callback failed: {str(e)}")
+# def send_callback_sync(url: str, token: str, data: Dict[str, Any]):
+#     with httpx.Client() as client:
+#         try:
+#             client.post(
+#                 url,
+#                 json=data,
+#                 headers={"x-callback-token": token},
+#                 timeout=10.0
+#             )
+#         except Exception as e:
+#             print(f"Callback failed: {str(e)}")
 
-@celery_app.task(bind=True, max_retries=3)
-def delete_document(
-    self,
-    document_id: str,
-    workspace_id: str,
-    callback_url: Optional[str] = None,
-    callback_token: Optional[str] = None
-) -> Dict[str, Any]:
-    try:
-        # Initialize vector store
-        vector_store = PineconeVectorStore.from_existing_index(
-            index_name=os.getenv('PINECONE_INDEX'),
-            embedding=embeddings
-        )
-        
-        # Delete all chunks for this document
-        vector_store.delete(
-            filter={
-                "documentId": document_id,
-                "workspaceId": workspace_id
-            }
-        )
-        
-        result = {
-            "success": True
-        }
-        
-        # Send callback if URL provided
-        if callback_url and callback_token:
-            callback_data = {
-                "documentId": document_id,
-                "status": "DELETED"
-            }
-            send_callback_sync(callback_url, callback_token, callback_data)
-        
-        return result
-        
-    except Exception as e:
-        error_result = {
-            "success": False,
-            "error": str(e)
-        }
-        
-        # Send error callback if URL provided
-        if callback_url and callback_token:
-            callback_data = {
-                "documentId": document_id,
-                "status": "FAILED",
-                "error": str(e)
-            }
-            send_callback_sync(callback_url, callback_token, callback_data)
-        
-        return error_result
+# @celery_app.task(bind=True, max_retries=3)
+# def delete_document(
+#     self,
+#     document_id: str,
+#     workspace_id: str,
+#     callback_url: Optional[str] = None,
+#     callback_token: Optional[str] = None
+# ) -> Dict[str, Any]:
+#     try:
+#         # Initialize vector store
+#         vector_store = PineconeVectorStore.from_existing_index(
+#             index_name=os.getenv('PINECONE_INDEX'),
+#             embedding=embeddings
+#         )
+#         
+#         # Delete all chunks for this document
+#         vector_store.delete(
+#             filter={
+#                 "$and": [
+#                     {"document_id": {"$eq": document_id}},
+#                     {"workspace_id": {"$eq": workspace_id}}
+#                 ]
+#             }
+#         )
+#         
+#         result = {
+#             "success": True
+#         }
+#         
+#         # Send callback if URL provided
+#         if callback_url and callback_token:
+#             callback_data = {
+#                 "documentId": document_id,
+#                 "status": "DELETED"
+#             }
+#             send_callback_sync(callback_url, callback_token, callback_data)
+#         
+#         return result
+#         
+#     except Exception as e:
+#         error_result = {
+#             "success": False,
+#             "error": str(e)
+#         }
+#         
+#         # Send error callback if URL provided
+#         if callback_url and callback_token:
+#             callback_data = {
+#                 "documentId": document_id,
+#                 "status": "FAILED",
+#                 "error": str(e)
+#             }
+#             send_callback_sync(callback_url, callback_token, callback_data)
+#         
+#         return error_result
