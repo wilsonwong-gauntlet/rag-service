@@ -36,6 +36,13 @@ export async function DELETE(
             }
           }
         }
+      },
+      include: {
+        workspace: {
+          select: {
+            id: true
+          }
+        }
       }
     });
 
@@ -54,7 +61,7 @@ export async function DELETE(
           },
           body: JSON.stringify({
             vectorIds: document.vectorIds,
-            workspaceId: document.workspaceId
+            workspaceId: document.workspace.id
           }),
         });
 

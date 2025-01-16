@@ -143,7 +143,7 @@ async def handle_process_document(request: ProcessDocumentRequest):
 #         ) 
 
 @app.post("/knowledge-base/generate", response_model=AIResponse)
-async def generate_knowledge_base_response(query: KnowledgeBaseRequest):
+async def handle_knowledge_base_generate(query: KnowledgeBaseRequest):
     """Generate an AI response using workspace documents"""
     try:
         # Build filter based on workspace only
@@ -182,7 +182,7 @@ async def generate_knowledge_base_response(query: KnowledgeBaseRequest):
         )
         
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e)) 
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/delete-vectors", response_model=DeleteVectorsResponse)
 async def handle_delete_vectors(request: DeleteVectorsRequest):
