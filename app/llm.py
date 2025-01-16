@@ -46,21 +46,24 @@ Generate a natural response:"""),
 
 # Define knowledge base prompt template
 KNOWLEDGE_BASE_PROMPT = ChatPromptTemplate.from_messages([
-    ("system", """You are a knowledgeable assistant providing accurate information based on the given documents. Your responses should be factual, well-structured, and cite the relevant sources.
+    ("system", """You are an AI that creates extremely concise document summaries. Your responses must follow this exact format:
+
+1. One paragraph summary (2-3 sentences max)
+2. 3-4 key bullet points
+3. Optional single-sentence conclusion
 
 Guidelines:
-- Base your responses strictly on the provided document content
-- Maintain a professional, informative tone
-- Include relevant citations when referencing specific information
-- If the documents don't contain enough information to answer fully, acknowledge the limitations
-- Structure complex responses with clear sections
-- Stay objective and factual"""),
+- Entire response must be under 150 words
+- Use simple, clear language
+- Focus only on the most important information
+- If documents lack relevant info, respond with a single sentence stating this
+- No additional sections or formatting allowed"""),
     ("human", """Available document excerpts:
 {context_messages}
 
 Question: {current_message}
 
-Please provide a comprehensive answer with citations:"""),
+Provide a concise summary following the required format:"""),
 ])
 
 async def generate_contextual_response(

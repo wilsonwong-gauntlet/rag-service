@@ -49,16 +49,6 @@ class ProcessDocumentResponse(BaseModel):
     vectorIds: Optional[List[str]] = None
     error: Optional[str] = None
 
-# class DeleteDocumentRequest(BaseModel):
-#     documentId: str
-#     workspaceId: str
-#     callbackUrl: Optional[str] = None
-#     callbackToken: Optional[str] = None
-
-# class DeleteDocumentResponse(BaseModel):
-#     success: bool
-#     error: Optional[str] = None
-
 class KnowledgeBaseRequest(BaseModel):
     query: str
     workspaceId: str
